@@ -1,0 +1,112 @@
+:root {
+    --mdc-grid-list-tile-width: calc(20% - 4px);
+}
+@media only screen and (max-width: 1024px) {
+    :root {
+        --mdc-grid-list-tile-width: calc(33% - 4px);
+    }
+}
+@media only screen and (max-width: 767px) {
+    :root {
+        --mdc-grid-list-tile-width: calc(100% - 4px);
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#my-bands {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    height: 100%;
+}
+#band-filter-wrapper {
+    position: fixed;
+    top:0;
+    left: 0;
+    padding: 12px;
+    background: #fff;
+}
+#band-filter-wrapper input {
+    font-size: 16px;
+    padding: 4px;
+}
+.bands {
+    margin-top: 78px !important;
+}
+#my-bands .mdc-persistent-drawer__drawer {
+    display: block;
+    overflow: auto;
+}
+#my-bands ul {
+    min-height: 100%;
+}
+#my-bands li {
+    transition: background-color 200ms linear;
+    padding: 8px 16px;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.04em;
+    display: flex;
+    border-bottom: 1px solid #333;
+    align-items: center;
+}
+#my-bands li span{
+    flex: 1;
+}
+.mdc-dialog__body--scrollable {
+    max-height: 380px;
+}
+.mdc-grid-tile {
+    cursor: pointer;
+}
+.material-icons,
+.mdc-button {
+    vertical-align: middle;
+}
+.mdc-textfield__input {
+    color: var(--mdc-theme-text-primary-on-dark, rgba(0, 0, 0, 0.87));
+}
+.mdc-grid-tile__primary {
+    overflow: hidden;
+}
+.mdc-grid-tile__primary img {
+    object-fit: cover;
+    min-width: 100%;
+    width: auto;
+    height: 284px;
+}
+@media only screen and (max-width: 767px) {
+    .mdc-grid-tile__primary img {
+        min-width: 0;
+        max-width: 100%;
+        height: auto;
+        width: auto;
+    }
+}
+.my-band-toggle.mdc-grid-tile__icon {
+    position: absolute !important;
+    top: calc(50% - 24px) !important;
+    left: 3px !important;
+}
+#band-details .my-band-toggle {
+    display: inline-block;
+}
+.mdc-toolbar__row {
+    flex-wrap: wrap;
+}
+@media only screen and (max-width: 767px) {
+    .mdc-toolbar__section {
+        flex-basis: 100%;
+        align-items: center !important;
+        justify-content: center !important;
+        margin-bottom: 16px;
+    }
+    .mdc-toolbar__section:nth-child(2) {
+        z-index: 2;
+    }
+}
